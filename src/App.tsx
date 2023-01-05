@@ -3,6 +3,9 @@ import "./App.css";
 import Great from "./components/Great";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Heading from "./components/Heading";
+import { Oscar } from "./components/Oscar";
 
 function App() {
   const personName = {
@@ -19,9 +22,12 @@ function App() {
   return (
     <div className="App">
       <div className="head">
-        <Great name="Kelvin" messageCount={10} isLoggedIn={true} />
-        <Person name={personName} />
-        <PersonList names={nameList} />
+        <Status status="success" />
+        <Heading>Hello World!</Heading>
+        <Oscar>
+          <Heading>Oscar goes to Leonardo </Heading>
+        </Oscar>
+        <Great name="Kelvin" isLoggedIn={true} />
       </div>
     </div>
   );
