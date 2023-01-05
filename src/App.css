@@ -3,7 +3,7 @@
 }
 
 .head {
-  display: flex;
+  display: block;
   item-align: center;
   text-align: center;
   text-transform: uppercase;

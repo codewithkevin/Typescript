@@ -2,15 +2,20 @@ import React from "react";
 
 type GreetProps = {
   name: string;
-  number: number;
+  messageCount: number;
+  isLoggedIn: boolean;
 };
 
 const Great = (props: GreetProps) => {
   return (
     <div>
-      <h1>
-        Welcome {props.name} You have {props.number} unread messages
-      </h1>
+      {props.isLoggedIn ? (
+        <h1>
+          Welcome {props.name} You have {props.messageCount} unread messages
+        </h1>
+      ) : (
+        <h1>Please Log In </h1>
+      )}
     </div>
   );
 };
